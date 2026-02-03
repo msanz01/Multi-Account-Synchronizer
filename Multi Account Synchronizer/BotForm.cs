@@ -254,28 +254,28 @@ namespace Multi_Account_Synchronizer
             api.load_settings(newpath);
             MessageBox.Show("Reloaded the original Phoenix Bot profile. DO NOT FORGET TO LOAD PROFILE TO MAS AGAIN", "Profile", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        private void OttercheckBox_CheckedChanged(object sender, EventArgs e)
+        private void SantaClawscheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (OttercheckBox.Checked)
+            if (SantaClawscheckBox.Checked)
             {
                 if (PandaCheckBox.Checked)
                     PandaCheckBox.Checked = false;
-                if (!player.Pet.Skills.ContainsKey(663))
+                if (!player.Pet.Skills.ContainsKey(1890))
                 {
                     player.Pet.Skills.Clear();
-                    player.Pet.Skills[663] = true;
+                    player.Pet.Skills[1890] = true;
                 }
             }
 
-            Bot.Otter = OttercheckBox.Checked;
+            Bot.SantaClaws = SantaClawscheckBox.Checked;
         }
 
         private void PandaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (PandaCheckBox.Checked)
             {
-                if (OttercheckBox.Checked)
-                    OttercheckBox.Checked = false;
+                if (SantaClawscheckBox.Checked)
+                    SantaClawscheckBox.Checked = false;
                 if (!player.Pet.Skills.ContainsKey(1714))
                 {
                     player.Pet.Skills.Clear();
