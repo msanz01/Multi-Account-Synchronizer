@@ -315,7 +315,7 @@ namespace Multi_Account_Synchronizer
             RadioButton Buffer = b.radioButton2;
             RadioButton MinilandOwner = b.radioButton3;
             NumericUpDown DelayMultipler = b.numericUpDown1;
-            CheckBox Otter = b.OttercheckBox;
+            CheckBox SantaClaws = b.SantaClawscheckBox;
             CheckBox Panda = b.PandaCheckBox;
             CheckBox swordsmanSP1 = b.checkBox1;
             string path = "";
@@ -372,7 +372,7 @@ namespace Multi_Account_Synchronizer
                     DPS.Checked = Statics.JsonGetValueOrDefault(member, "DPS", false);
                     Buffer.Checked = Statics.JsonGetValueOrDefault(member, "Buffer", true);
                     MinilandOwner.Checked = Statics.JsonGetValueOrDefault(member, "Miniland Owner", false);
-                    Otter.Checked = Statics.JsonGetValueOrDefault(member, "Otter", false);
+                    SantaClaws.Checked = Statics.JsonGetValueOrDefault(member, "SantaClaws", false);
                     Panda.Checked = Statics.JsonGetValueOrDefault(member, "Panda", false);
                     swordsmanSP1.Checked = Statics.JsonGetValueOrDefault(member, "Swordsman SP1", false);
                     DelayMultipler.Value = Convert.ToDecimal(Statics.JsonGetValueOrDefault(member, "Delay Multipler", 1.0));
@@ -612,7 +612,7 @@ namespace Multi_Account_Synchronizer
                 newItem.Add("Miniland Owner", api.Item5.MinilandOwner);
                 newItem.Add("Buffer", api.Item5.Buffer);
                 newItem.Add("Delay Multipler", ((double)api.Item6.numericUpDown1.Value));
-                newItem.Add("Otter", api.Item5.Otter);
+                newItem.Add("SantaClaws", api.Item5.SantaClaws);
                 newItem.Add("Panda", api.Item5.Panda);
                 newItem.Add("Swordsman SP1", api.Item5.SwordsmanSP1);
                 newItem.Add("Path", api.Item6.textBox2.Text);
