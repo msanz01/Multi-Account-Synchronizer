@@ -72,7 +72,6 @@ namespace Multi_Account_Synchronizer
         int LastAttackedMob = -1;
 
         #region Some Lure Shit
-        public bool Otter = false;
         public bool Panda = false;
         public bool SantaClaws = false;
         public bool SwordsmanSP1 = false;
@@ -678,8 +677,6 @@ namespace Multi_Account_Synchronizer
             bool isReady = false;
             if (Panda && Player.Pet.Skills.ContainsKey(1714))
                 isReady = Player.Pet.Skills[1714];
-            else if (Otter && Player.Pet.Skills.ContainsKey(663))
-                isReady = Player.Pet.Skills[663];
             else if (SantaClaws && Player.Pet.Skills.ContainsKey(1890))
                 isReady = Player.Pet.Skills[1890];
             return isReady;
@@ -770,16 +767,11 @@ namespace Multi_Account_Synchronizer
                     {
                         Api.use_pet_skill(LureMob, 1714);
                     }
-                    if (Otter && IsVokeReady() && Scene.MonstersInRadius(Player.X,Player.Y,AttackSearchRadius,AttackBlacklist,AttackWhitelist,MonsterList) >= MinVokeMonsterCount)
+                    if (SantaClaws && IsVokeReady() && Scene.MonstersInRadius(Player.X,Player.Y,AttackSearchRadius,AttackBlacklist,AttackWhitelist,MonsterList) >= MinVokeMonsterCount)
                     {
                         var mob = Scene.EntityData.Values.Where(x => x.Id == LureMob).FirstOrDefault();
                         if (mob != null)
                         {
-                            if (SantaClaws && IsVokeReady() && Scene.MonstersInRadius(Player.X,Player.Y,AttackSearchRadius,AttackBlacklist,AttackWhitelist,MonsterList) >= MinVokeMonsterCount)
-                            {    
-                                var mob = Scene.EntityData.Values.Where(x => x.Id == LureMob).FirstOrDefault();
-                                if (mob != null)
-                                {
 
 
                             if (Statics.Distance(mob.Pos, new Point(Player.Pet.X, Player.Pet.Y)) <= Math.Sqrt(2) && VokeMonsterCount() >= MinVokeMonsterCount)
@@ -812,7 +804,7 @@ namespace Multi_Account_Synchronizer
             int count = 0;
             if (!Scene.EntityData.ContainsKey(LureMob))
                 return 0;
-            if (Otter || SantaClaws)
+            if (SantaClaws)
             {
                 //Scene.MonstersInRadius(Player.Pet.X, Player.Pet.Y, 6, AttackBlacklist, AttackWhitelist, MonsterList, IgnoreVokeRadius);
                 count = Scene.MonstersInRadius(Scene.EntityData[LureMob].Pos.X, Scene.EntityData[LureMob].Pos.Y, 6, AttackBlacklist, AttackWhitelist, MonsterList, IgnoreVokeRadius);
