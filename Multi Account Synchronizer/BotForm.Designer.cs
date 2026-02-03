@@ -42,7 +42,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.PandaCheckBox = new System.Windows.Forms.CheckBox();
-            this.OttercheckBox = new System.Windows.Forms.CheckBox();
+            this.SantaClawscheckBox = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -210,7 +210,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.Controls.Add(this.checkBox1, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.PandaCheckBox, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.OttercheckBox, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.SantaClawscheckBox, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.numericUpDown1, 4, 0);
             this.tableLayoutPanel5.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 17);
@@ -244,17 +244,17 @@
             this.PandaCheckBox.UseVisualStyleBackColor = true;
             this.PandaCheckBox.CheckedChanged += new System.EventHandler(this.PandaCheckBox_CheckedChanged);
             // 
-            // OttercheckBox
+            // SantaClawscheckBox
             // 
-            this.OttercheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OttercheckBox.AutoSize = true;
-            this.OttercheckBox.Location = new System.Drawing.Point(31, 6);
-            this.OttercheckBox.Name = "OttercheckBox";
-            this.OttercheckBox.Size = new System.Drawing.Size(49, 17);
-            this.OttercheckBox.TabIndex = 0;
-            this.OttercheckBox.Text = "Otter";
-            this.OttercheckBox.UseVisualStyleBackColor = true;
-            this.OttercheckBox.CheckedChanged += new System.EventHandler(this.OttercheckBox_CheckedChanged);
+            this.SantaClawscheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SantaClawscheckBox.AutoSize = true;
+            this.SantaClawscheckBox.Location = new System.Drawing.Point(31, 6);
+            this.SantaClawscheckBox.Name = "SantaClawscheckBox";
+            this.SantaClawscheckBox.Size = new System.Drawing.Size(49, 17);
+            this.SantaClawscheckBox.TabIndex = 0;
+            this.SantaClawscheckBox.Text = "SantaClaws";
+            this.SantaClawscheckBox.UseVisualStyleBackColor = true;
+            this.SantaClawscheckBox.CheckedChanged += new System.EventHandler(this.SantaClawscheckBox_CheckedChanged);
             // 
             // numericUpDown1
             // 
@@ -553,7 +553,7 @@
         public System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public System.Windows.Forms.CheckBox PandaCheckBox;
-        public System.Windows.Forms.CheckBox OttercheckBox;
+        public System.Windows.Forms.CheckBox SantaClawscheckBox;
         public System.Windows.Forms.NumericUpDown numericUpDown1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.CheckBox checkBox1;
